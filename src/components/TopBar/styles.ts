@@ -4,7 +4,7 @@ import { navbarText } from '../../styles/global';
 export const Container = styled.div<{device: string}>`
     display: flex;
     justify-content: space-between;
-    padding: ${({device}) => device === 'desktop' ? '0 140px' : device === 'tablet' ? '0 40px' : '0 20px'};
+    padding: ${({device}) => device === 'desktop' ? '0 120px' : device === 'tablet' ? '0 40px' : '0 20px'};
     background-color: var(--green);
     height: 40px;
     align-items: center;

@@ -3,7 +3,6 @@ import { breakpoints } from "../styles/global";
 export function getWindowSize() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { width } = useWindowDimensions();
-  console.log(width)
   if (width <= breakpoints.desktop && width > breakpoints.tablet) {
     return "desktop";
   }

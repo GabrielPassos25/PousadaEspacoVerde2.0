@@ -16,13 +16,13 @@ function App() {
       <GlobalStyle />
       <TopBar/>
       <NavBar/>
-      {/* Description */}
-      <Section>
-        <Description/>
-      </Section>
       {/* Atrativos */}
       <Section>
         <Atractives/>
+      </Section>
+      {/* Description */}
+      <Section>
+        <Description/>
       </Section>
       {/* Comodidades */}
       <Section>

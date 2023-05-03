@@ -7,6 +7,7 @@ import { NavBar } from './components/NavBar';
 import { Section } from './components/Section';
 import { Atractives } from './components/Atractives';
 import { Amenities } from './components/Amenities';
+import { Advertising } from './components/Advertising';
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
       {/* Comodidades */}
       <Section>
         <Amenities/>
+      </Section>
+      {/* Propagandas */}
+      <Section>
+        <Advertising/>
       </Section>
     </div>
   );

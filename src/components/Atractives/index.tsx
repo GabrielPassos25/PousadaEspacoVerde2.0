@@ -14,7 +14,7 @@ export function Atractives(){
         <Container device={windowSize}>
             <Image src={atractives} device={windowSize}/>
             <ImageSeparator device={windowSize}/>
-            <InfoContainer>
+            <InfoContainer device={windowSize}>
                 <Title device={windowSize}>
                     Atrativos locais que irão encantar sua estadia
                 </Title>

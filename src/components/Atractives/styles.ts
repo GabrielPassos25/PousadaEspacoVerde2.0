@@ -17,11 +17,11 @@ export const Image = styled.img<{device: string}>`
     `}
 `;
 
-export const InfoContainer = styled.div`
+export const InfoContainer = styled.div<{device: string}>`
     display: flex;
     flex-direction: column;
     padding: 24px 0;
-    align-items: center;
+    ${({device}) => device === 'mobile' && `align-items: center; justify-content: center;`};
 `; 
 
 export const Title = styled.div<{device: string}>`

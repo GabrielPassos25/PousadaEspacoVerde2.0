@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export const Container = styled.div<{device: string}>`
-    padding: ${({device}) => device === 'desktop' ? '100px 0px' : '60px 0'};
+    padding: ${({device}) => device === 'desktop' ? '40px 0px' : '20px 0'};
 `;

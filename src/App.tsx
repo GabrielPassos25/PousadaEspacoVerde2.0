@@ -8,6 +8,7 @@ import { Section } from './components/Section';
 import { Atractives } from './components/Atractives';
 import { Amenities } from './components/Amenities';
 import Description from './components/Description';
+import { Advertising } from './components/Advertising';
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
       {/* Comodidades */}
       <Section>
         <Amenities/>
+      </Section>
+      {/* Propagandas */}
+      <Section>
+        <Advertising/>
       </Section>
     </div>
   );

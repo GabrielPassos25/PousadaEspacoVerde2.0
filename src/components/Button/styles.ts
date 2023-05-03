@@ -8,6 +8,7 @@ export const Container = styled.div<{type: string, size: string, transparent: bo
     transition: filter 0.2s;
     &:hover {
         filter: brightness(0.9);
+        cursor: pointer
     }
     display: flex;
     align-items: center;

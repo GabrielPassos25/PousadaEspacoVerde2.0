@@ -100,7 +100,7 @@ export const navbarText = `
 `;
 
 export const breakpoints = {
-    mobile: 766,
+    mobile: 786,
     tablet: 1440,
     desktop: 1920,
   };

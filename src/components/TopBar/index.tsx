@@ -17,7 +17,6 @@ const text = {
 // Renderer
 export function TopBar(){
     const windowSize = getWindowSize();
-    console.log(windowSize)
     return (
         <Container device={windowSize}>
             <SocialMediasContainer>

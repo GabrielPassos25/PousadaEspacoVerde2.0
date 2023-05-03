@@ -4,6 +4,8 @@ import React from 'react';
 import { GlobalStyle } from "./styles/global";
 import { TopBar } from './components/TopBar';
 import { NavBar } from './components/NavBar';
+import { Section } from './components/Section';
+import { Atractives } from './components/Atractives';
 
 function App() {
   return (
@@ -11,6 +13,10 @@ function App() {
       <GlobalStyle />
       <TopBar/>
       <NavBar/>
+      {/* Atrativos */}
+      <Section>
+        <Atractives/>
+      </Section>
     </div>
   );
 }

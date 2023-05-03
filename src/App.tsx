@@ -6,6 +6,7 @@ import { TopBar } from './components/TopBar';
 import { NavBar } from './components/NavBar';
 import { Section } from './components/Section';
 import { Atractives } from './components/Atractives';
+import { Amenities } from './components/Amenities';
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
       {/* Atrativos */}
       <Section>
         <Atractives/>
+      </Section>
+      {/* Comodidades */}
+      <Section>
+        <Amenities/>
       </Section>
     </div>
   );

@@ -7,6 +7,7 @@ import { NavBar } from './components/NavBar';
 import { Section } from './components/Section';
 import { Atractives } from './components/Atractives';
 import { Amenities } from './components/Amenities';
+import Description from './components/Description';
 import { Advertising } from './components/Advertising';
 
 function App() {
@@ -15,6 +16,10 @@ function App() {
       <GlobalStyle />
       <TopBar/>
       <NavBar/>
+      {/* Description */}
+      <Section>
+        <Description/>
+      </Section>
       {/* Atrativos */}
       <Section>
         <Atractives/>

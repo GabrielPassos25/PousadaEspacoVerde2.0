@@ -98,3 +98,9 @@ export const navbarText = `
     font-weight: 600;
     line-height: 140%;
 `;
+
+export const breakpoints = {
+    mobile: 766,
+    tablet: 1440,
+    desktop: 1920,
+  };

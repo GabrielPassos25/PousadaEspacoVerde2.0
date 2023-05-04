@@ -49,8 +49,12 @@ export const Container = styled.div<{type: string, size: string, transparent: bo
             width: 240px;
             height: 46px; 
         `
-        : `
+        : size === 'xlarge' ? `
             width: 323px;
+            height: 46px;
+        `
+        : `
+            width: 402px;
             height: 46px;
         `
     }

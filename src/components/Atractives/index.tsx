@@ -1,33 +1,45 @@
 // Libs
 import React from 'react';
 import { Container, Image, InfoContainer, Title, Description, Separator, ImageSeparator } from './styles';
+import { ComponentProps } from '../../utils/componentProps';
 
 // Assets
-import atractives from '../../assets/atrativos.png';
 import { Button } from '../Button';
 import { getWindowSize } from '../../utils/getWindowSize';
 
 // Renderer
-export function Atractives(){
+export function Atractives({image, imageSide, title, firstParagraph, secondParagraph, buttonText, buttonOnClick, buttonSize}: ComponentProps) {
     const windowSize = getWindowSize();
     return (
         <Container device={windowSize}>
-            <Image src={atractives} device={windowSize}/>
-            <ImageSeparator device={windowSize}/>
+            {
+                imageSide === 'left' &&
+                <>
+                    <Image src={image} device={windowSize}/>
+                    <ImageSeparator device={windowSize}/>
+                </>
+            }
             <InfoContainer device={windowSize}>
                 <Title device={windowSize}>
-                    Atrativos locais que irão encantar sua estadia
+                    {title}
                 </Title>
                 <Separator/>
                 <Description>
-                    A cidade contém diversas atrações turísticas, como a Igreja do Céu, a Igreja Matriz de Nossa Senhora da Assunção, o Teatro Pedro II, a Cachoeira do Itarumã, a Cachoeira da Pirapora, a Cachoeira do Engenho Velho e a Pedra do Machado. 
+                    {firstParagraph}
                     <br/>
                     <br/>
-                    Cada uma dessas atrações oferece algo único para os visitantes, desde vistas incríveis até experiências culturais emocionantes. Viçosa do Ceará é um destino turístico encantador que vale a pena visitar.
+                    {secondParagraph}
                 </Description>
                 <Separator/>
-                <Button onClick={() => {}} size='xlarge' text='reservar minha estadia agora' type='primary'/>
+                <Button onClick={buttonOnClick} size={buttonSize} text={buttonText} type='primary'/>
             </InfoContainer>
+            {
+                imageSide === 'right' &&
+                <>
+                    <ImageSeparator device={windowSize}/>
+                    <Image src={image} device={windowSize}/>
+                </>
+            }
         </Container>   
     );
 }

@@ -7,7 +7,7 @@ interface ButtonProps {
     text: string;
     onClick: () => void;
     transparent?: boolean;
-    size: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
+    size: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
 }
 
 // Renderer

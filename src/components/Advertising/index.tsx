@@ -1,18 +1,32 @@
 // Libs
 import React from 'react';
-import { Container, TitleContainer, Title } from './styles';
+import { Container, TitleContainer, Title, ChildrenContainer, BannerContainer } from './styles';
 import { getWindowSize } from '../../utils/getWindowSize';
 
+// Props
+interface Props {
+    children?: React.ReactNode;
+    background_opacity?: boolean;
+    title: string;
+}
+
 // Renderer
-export function Advertising(){
+export function Advertising({title, background_opacity=false, children=false} : Props){
     const windowSize = getWindowSize();
     return (
-        <Container>
-            <TitleContainer device={windowSize}>
-                <Title>
-                    Serão momentos inesquecíveis
-                </Title>
-            </TitleContainer>
+        <Container background_opacity={background_opacity} has_children={Boolean(children)}>
+            <BannerContainer has_children={Boolean(children)} device={windowSize}>
+                <TitleContainer device={windowSize} has_children={Boolean(children)}>
+                    <Title>
+                        {title}
+                    </Title>
+                </TitleContainer>
+            </BannerContainer>
+            <ChildrenContainer>
+                {
+                    children
+                }
+            </ChildrenContainer>
         </Container>
     );
 }

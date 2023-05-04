@@ -16,6 +16,7 @@ import atractives2 from './assets/atrativos2.png';
 import atractives3 from './assets/atrativos3.png';
 import descricao from './assets/descricao.png';
 import descricao2 from './assets/descricao2.png';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -55,7 +56,10 @@ function App() {
       </Section>
       {/* Propagandas */}
       <Section>
-        <Advertising/>
+        <Advertising
+          title='Serão momentos inesquecíveis'
+          background_opacity
+        />
       </Section>
       {/* Description */}
       <Section>
@@ -96,6 +100,13 @@ function App() {
           buttonSize='xxlarge'
         />
       </Section>
+      {/* Footer */}
+      <Advertising
+        title='dias cheios de aventuras e emoções que ficarão na sua memória'
+        children={
+          <Footer/>
+        }
+      />
     </div>
   );
 }

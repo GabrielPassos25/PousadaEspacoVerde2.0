@@ -62,4 +62,5 @@ export const Container = styled.div<{type: string, size: string, transparent: bo
         background: transparent;
         border: 1px solid var(--green);
     `}
+    text-align: center;
 `;

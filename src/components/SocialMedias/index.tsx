@@ -3,8 +3,11 @@ import React from 'react';
 
 // Assets
 import { ReactComponent as Facebook } from '../../assets/facebook.svg';
+import { ReactComponent as FacebookFooter } from '../../assets/facebookFooter.svg';
 import { ReactComponent as Instagram } from '../../assets/instagram.svg';
+import { ReactComponent as InstagramFooter } from '../../assets/instagramFooter.svg';
 import { ReactComponent as WhatsApp } from '../../assets/whatsapp.svg';
+import { ReactComponent as WhatsAppFooter } from '../../assets/whatsappFooter.svg';
 
 // Styles
 import { Button } from './styles';
@@ -32,6 +35,18 @@ const images : ImageMap = {
     },
     whatsapp: {
         logo: <WhatsApp/>,
+        link: 'https://api.whatsapp.com/send?phone=5585987731103'
+    },
+    facebookFooter: {
+        logo: <FacebookFooter/>,
+        link: ''
+    },
+    instagramFooter: {
+        logo: <InstagramFooter/>,
+        link: 'https://www.instagram.com/espacoverdevicosa/'
+    },
+    whatsappFooter: {
+        logo: <WhatsAppFooter/>,
         link: 'https://api.whatsapp.com/send?phone=5585987731103'
     }
 }

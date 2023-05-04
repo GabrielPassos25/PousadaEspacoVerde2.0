@@ -22,6 +22,9 @@ export const Map = () => (
         bootstrapURLKeys={{ key: "AIzaSyBKObdVgdAYJzPqw8nM5ZFzBBp0TTxaeZU" }}
         defaultCenter={location.center}
         defaultZoom={18}
+        draggable={false}
+        options={{disableDefaultUI: true}}
+        
         >
         <div>
           <img src={pin} alt="marker" />

@@ -17,6 +17,7 @@ import atractives3 from './assets/atrativos3.png';
 import descricao from './assets/descricao.png';
 import descricao2 from './assets/descricao2.png';
 import { Footer } from './components/Footer';
+import { Map } from './components/Map';
 
 function App() {
   return (
@@ -99,6 +100,9 @@ function App() {
           buttonOnClick={() => {}}
           buttonSize='xxlarge'
         />
+      </Section>
+      <Section>
+          <Map/>
       </Section>
       {/* Footer */}
       <Advertising

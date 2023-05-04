@@ -9,6 +9,9 @@ import { Atractives } from './components/Atractives';
 import { Amenities } from './components/Amenities';
 import Description from './components/Description';
 import { Advertising } from './components/Advertising';
+import Festival from './components/Festival';
+import festa from './assets/FestaConceicao.png';
+import FestivalsPage from './components/FestivalsPage';
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
       {/* Propagandas */}
       <Section>
         <Advertising/>
+      </Section>
+      <Section>
+        <FestivalsPage/>
       </Section>
     </div>
   );

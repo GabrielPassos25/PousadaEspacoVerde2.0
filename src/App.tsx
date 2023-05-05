@@ -18,6 +18,8 @@ import descricao from './assets/descricao.png';
 import descricao2 from './assets/descricao2.png';
 import { Footer } from './components/Footer';
 import { Map } from './components/Map';
+import { Forms } from './components/Forms';
+import { InfosContainer } from './styles';
 
 function App() {
   return (
@@ -102,7 +104,10 @@ function App() {
         />
       </Section>
       <Section>
+        <InfosContainer>
           <Map/>
+          <Forms/>
+        </InfosContainer>
       </Section>
       {/* Footer */}
       <Advertising

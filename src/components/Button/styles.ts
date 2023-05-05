@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { textButton } from '../../styles/global';
 
-export const Container = styled.div<{type: string, size: string, transparent: boolean}>`
+export const Container = styled.div<{type: string, size: string, transparent: boolean, fullWidth?: boolean}>`
     ${textButton}
     border: 0;
     padding: 12px 24px;
@@ -63,4 +63,7 @@ export const Container = styled.div<{type: string, size: string, transparent: bo
         border: 1px solid var(--green);
     `}
     text-align: center;
+    ${({fullWidth}) => fullWidth && `
+        width: 100%;
+    `}
 `;

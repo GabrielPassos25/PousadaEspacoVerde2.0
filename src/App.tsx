@@ -9,6 +9,9 @@ import { Atractives } from './components/Atractives';
 import { Amenities } from './components/Amenities';
 import Description from './components/Description';
 import { Advertising } from './components/Advertising';
+import Festival from './components/Festival';
+import festa from './assets/FestaConceicao.png';
+import FestivalsPage from './components/FestivalsPage';
 
 // Assets
 import atractives from './assets/atrativos.png';
@@ -63,6 +66,10 @@ function App() {
           title='Serão momentos inesquecíveis'
           background_opacity
         />
+      </Section>
+      {/* Festivais */}
+      <Section>
+        <FestivalsPage/>
       </Section>
       {/* Description */}
       <Section>

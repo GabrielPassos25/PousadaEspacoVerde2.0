@@ -15,6 +15,9 @@ export const Image = styled.img<{device: string}>`
         width: ${device === 'desktop' ? '560px' : '330px'};
         height: ${device === 'desktop' ? '560px' : '392px'};
     `}
+    border-radius: 5%;
+    object-fit: cover;
+    box-shadow: 2px 4px 32px rgba(0, 0, 0, 0.15);;
 `;
 
 export const InfoContainer = styled.div<{device: string}>`
@@ -25,12 +28,15 @@ export const InfoContainer = styled.div<{device: string}>`
 `; 
 
 export const Title = styled.div<{device: string}>`
-    ${({device}) => device === 'desktop' ? 
+    ${({device}) => device === 'desktop'  ? 
         `
             ${secondaryHeader}
+            `
+        : device === 'tablet' ?
         `
-        : 
+            ${terciaryHeader}
         `
+        : `
             ${terciaryHeader}
             text-align: center
         `

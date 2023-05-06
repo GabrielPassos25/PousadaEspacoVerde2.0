@@ -11,25 +11,7 @@ import { getWindowSize } from '../../utils/getWindowSize';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { ReactComponent as Menu } from '../../assets/menu.svg';
 import { Button } from '../Button';
-
-const modules = [
-    {
-        title: "Atrações",
-        link: "/atracoes"
-    },
-    {
-        title: "Acomodações",
-        link: "/acomodacoes"
-    },
-    {
-        title: "Comodidades",
-        link: "/comodidades"
-    },
-    {
-        title: "Pontos Turísticos",
-        link: "/pontos-turisticos"
-    }
-]
+import { modules } from '../../utils/modules';
 
 // Renderer
 export function NavBar(){

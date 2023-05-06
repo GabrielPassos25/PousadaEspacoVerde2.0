@@ -48,7 +48,13 @@ export const secondaryHeader = `
     font-size: 36px;
     font-weight: 800;
     line-height: 120%;
-    `;
+`;
+
+export const secondaryHeaderSemiBold = `
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 150%;
+`;
     
 export const terciaryHeader = `
     font-size: 28px;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { textButton } from '../../styles/global';
 
-export const Container = styled.div<{type: string, size: string, transparent: boolean}>`
+export const Container = styled.div<{type: string, size: string, transparent: boolean, fullWidth?: boolean}>`
     ${textButton}
     border: 0;
     padding: 12px 24px;
@@ -49,13 +49,21 @@ export const Container = styled.div<{type: string, size: string, transparent: bo
             width: 240px;
             height: 46px; 
         `
-        : `
+        : size === 'xlarge' ? `
             width: 323px;
+            height: 46px;
+        `
+        : `
+            width: 402px;
             height: 46px;
         `
     }
     ${({transparent}) => transparent && `
         background: transparent;
         border: 1px solid var(--green);
+    `}
+    text-align: center;
+    ${({fullWidth}) => fullWidth && `
+        width: 100%;
     `}
 `;

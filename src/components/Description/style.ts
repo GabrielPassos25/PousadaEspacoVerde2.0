@@ -3,6 +3,7 @@ import { secondaryHeader, secondaryText, terciaryHeader } from '../../styles/glo
 
 export const Container = styled.div<{device: string}>`
     display: flex;
+    flex: 1;
     flex-direction: ${({device}) => device !== 'mobile' ? 'row' : 'column'};
     padding: ${({device}) => device === 'desktop' ? '64px 0' : device === 'tablet' ? '60px 0' : '20xp 0'};
 `;

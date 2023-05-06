@@ -5,7 +5,7 @@ import { Button } from "../Button";
 import { ComponentProps } from "../../utils/componentProps";
 
 
-const Description = ({image, imageSide, title, firstParagraph, secondParagraph, buttonText, buttonOnClick, buttonSize}: ComponentProps) =>{
+const Description = ({image, imageSide, title, firstParagraph, secondParagraph, buttonText, buttonOnClick, buttonSize='large'}: ComponentProps) =>{
     const windowSize = getWindowSize();
     return(
         <Container device={windowSize}>

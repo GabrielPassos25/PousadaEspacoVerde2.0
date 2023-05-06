@@ -10,6 +10,7 @@ import { ReactComponent as WhatsappForms } from '../../assets/whatsappForms.svg'
 import { ReactComponent as Message } from '../../assets/message.svg';
 import { Button } from '../Button';
 import { Contact } from '../Contact';
+import { getWindowSize } from '../../utils/getWindowSize';
 
 // Renderer
 export function Forms(){
@@ -17,10 +18,10 @@ export function Forms(){
     const [email, setEmail] = React.useState('');
     const [whatsapp, setWhatsapp] = React.useState('');
     const [message, setMessage] = React.useState('');
-
+    const windowSize = getWindowSize();
     return (
         <Container>
-            <Title>
+            <Title device={windowSize}>
                 Entre em contato conosco
             </Title>
             <Input

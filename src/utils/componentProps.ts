@@ -6,5 +6,5 @@ export interface ComponentProps {
     secondParagraph: string;
     buttonText: string;
     buttonOnClick: () => void;
-    buttonSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
+    buttonSize?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
 }

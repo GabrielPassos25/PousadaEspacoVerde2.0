@@ -3,7 +3,6 @@ import { secondaryHeader, terciaryHeader } from '../../styles/global';
 import { secondaryText } from '../../styles/global';
 
 export const Container = styled.div<{device: string}>`
-    padding: 64px 120px;
     display: flex;
     padding: ${({device}) => device === 'desktop' ? '64px 120px' : device === 'tablet' ? '60px 40px' : '20px 20px'};
     flex-direction: ${({device}) => device !== 'mobile' ? 'row' : 'column'};
@@ -12,9 +11,10 @@ export const Container = styled.div<{device: string}>`
 
 export const Image = styled.img<{device: string}>`
     ${({device}) => `
-        width: ${device === 'desktop' ? '560px' : '330px'};
+        width: ${device === 'desktop' ? '560px' : device === 'tablet' ? '40%' : '80%'};
         height: ${device === 'desktop' ? '560px' : '392px'};
     `}
+    display: flex;
     border-radius: 5%;
     object-fit: cover;
     box-shadow: 2px 4px 32px rgba(0, 0, 0, 0.15);;
@@ -22,6 +22,7 @@ export const Image = styled.img<{device: string}>`
 
 export const InfoContainer = styled.div<{device: string}>`
     display: flex;
+    flex: 1;
     flex-direction: column;
     padding: 24px 0;
     ${({device}) => device === 'mobile' && `align-items: center; justify-content: center;`};

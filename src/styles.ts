@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
-export const InfosContainer = styled.div`
+export const InfosContainer = styled.div<{device: string}>`
     display: flex;
     flex: 1;
-    flex-direction: row;
-    padding: 64px 120px;
-    justify-content: space-between;
+    ${({device}) => `
+        flex-direction: ${device === 'mobile' ? 'column' : 'row'};
+        padding: ${device === 'desktop'? '64px 120px' : device === 'tablet' ? '40px 40px' : '20px 20px'};
+        align-items: ${device === 'mobile' ? 'center' : null};
+
+    `}
+    justify-content:center;
 `;

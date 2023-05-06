@@ -6,6 +6,7 @@ import { Container } from './styles';
 import { ReactComponent as WhatsAppForms } from '../../assets/whatsappForms.svg';
 import { ReactComponent as Mail } from '../../assets/mail.svg';
 import { ContactRow } from './row';
+import { Separator } from '../Atractives/styles';
 
 
 export type InfoMap = {
@@ -44,6 +45,7 @@ export function Contact(){
             <ContactRow
                 data={contactPhone}
             />
+            <Separator/>
             <ContactRow
                 data={contactEmail}
             />

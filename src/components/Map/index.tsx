@@ -3,6 +3,7 @@ import GoogleMapReact from 'google-map-react'
 
 import pin from '../../assets/pin.svg'
 import { Container, Title } from './styles'
+import { getWindowSize } from '../../utils/getWindowSize';
 
 const location = {
     address: 'R. Silva Jardim, 644 - centro, Viçosa do Ceará - CE, 62300-000',
@@ -12,24 +13,30 @@ const location = {
     }
 }
 
-export const Map = () => (
-  <Container>
-    <Title>
-      Acesso à pousada
-    </Title>
-    <div style={{ height: '390px', width: '541px', marginTop: '12px'}}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyBKObdVgdAYJzPqw8nM5ZFzBBp0TTxaeZU" }}
-        defaultCenter={location.center}
-        defaultZoom={18}
-        draggable={false}
-        options={{disableDefaultUI: true}}
-        
-        >
-        <div>
-          <img src={pin} alt="marker" />
-        </div>
-      </GoogleMapReact>
-    </div>
+
+const Map = () =>{
+  const windowSize = getWindowSize();
+  return(
+    <Container device={windowSize}>
+      <Title device={windowSize}> 
+        Acesso à pousada
+      </Title>
+      <div style={{ height: windowSize === 'desktop'?'390px':'422px' , width: windowSize === 'desktop'?'541px': windowSize === 'tablet'?'361px':'330px', marginTop: '12px'}}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "AIzaSyBKObdVgdAYJzPqw8nM5ZFzBBp0TTxaeZU" }}
+          defaultCenter={location.center}
+          defaultZoom={18}
+          draggable={false}
+          options={{disableDefaultUI: true}}
+          
+          >
+          <div>
+            <img src={pin} alt="marker" />
+          </div>
+        </GoogleMapReact>
+      </div>
   </Container>
-)
+  )
+}
+
+export default Map;

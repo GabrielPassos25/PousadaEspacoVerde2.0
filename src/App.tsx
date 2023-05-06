@@ -9,6 +9,7 @@ import { Atractives } from './components/Atractives';
 import { Amenities } from './components/Amenities';
 import Description from './components/Description';
 import { Advertising } from './components/Advertising';
+import { getWindowSize } from './utils/getWindowSize';
 
 // Assets
 import atractives from './assets/atrativos.png';
@@ -17,11 +18,12 @@ import atractives3 from './assets/atrativos3.png';
 import descricao from './assets/descricao.png';
 import descricao2 from './assets/descricao2.png';
 import { Footer } from './components/Footer';
-import { Map } from './components/Map';
 import { Forms } from './components/Forms';
 import { InfosContainer } from './styles';
+import Map from './components/Map';
 
 function App() {
+  const windowSize = getWindowSize();
   return (
     <div className="App">
       <GlobalStyle />
@@ -104,7 +106,7 @@ function App() {
         />
       </Section>
       <Section>
-        <InfosContainer>
+        <InfosContainer device={windowSize}>
           <Map/>
           <Forms/>
         </InfosContainer>

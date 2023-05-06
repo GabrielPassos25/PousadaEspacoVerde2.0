@@ -28,6 +28,5 @@ export const List = styled.div<{device: string}>`
     row-gap: ${({device}) => device === 'desktop' ? '84px' : device === 'tablet' ? '48px' : '68px'};
     column-gap: ${({device}) => device === 'desktop' ? '64px' : device === 'tablet' ? '48px' : '0px'};
     justify-content:center;
-    align-items:center;
     padding: ${({device}) => device === 'desktop' ? '0 164px' : device === 'tablet' ? '0px 161px' : '0px 70px'};
 `;

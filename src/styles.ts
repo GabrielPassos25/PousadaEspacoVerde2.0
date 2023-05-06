@@ -5,7 +5,7 @@ export const InfosContainer = styled.div<{device: string}>`
     flex: 1;
     ${({device}) => `
         flex-direction: ${device === 'mobile' ? 'column' : 'row'};
-        padding: ${device === 'desktop'? '64px 120px' : device === 'tablet' ? '40px 60px' : '20px 20px'};
+        padding: ${device === 'desktop'? '64px 120px' : device === 'tablet' ? '40px 40px' : '20px 20px'};
         align-items: ${device === 'mobile' ? 'center' : null};
 
     `}

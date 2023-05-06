@@ -8,7 +8,7 @@ import { Button } from '../Button';
 import { getWindowSize } from '../../utils/getWindowSize';
 
 // Renderer
-export function Atractives({image, imageSide, title, firstParagraph, secondParagraph, buttonText, buttonOnClick, buttonSize}: ComponentProps) {
+export function Atractives({image, imageSide, title, firstParagraph, secondParagraph, buttonText, buttonOnClick, buttonSize='large'}: ComponentProps) {
     const windowSize = getWindowSize();
     return (
         <Container device={windowSize}>
@@ -31,7 +31,7 @@ export function Atractives({image, imageSide, title, firstParagraph, secondParag
                     {secondParagraph}
                 </Description>
                 <Separator/>
-                <Button onClick={buttonOnClick} size={buttonSize} text={buttonText} type='primary'/>
+                <Button onClick={buttonOnClick} size={buttonSize} text={buttonText} type='primary' fullWidth={windowSize === 'mobile'} />
             </InfoContainer>
             {
                 imageSide === 'right' &&

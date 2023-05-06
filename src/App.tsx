@@ -39,7 +39,7 @@ function App() {
           secondParagraph='Cada uma dessas atrações oferece algo único para os visitantes, desde vistas incríveis até experiências culturais emocionantes. Viçosa do Ceará é um destino turístico encantador que vale a pena visitar.'
           buttonText='reservar minha estadia agora'
           buttonOnClick={() => {}}
-          buttonSize='xlarge'
+          {...windowSize !== 'mobile' && {buttonSize: 'xlarge'}}
         />
       </Section>
       {/* Description */}
@@ -89,7 +89,7 @@ function App() {
           secondParagraph='A Lagoa Pedro II é um local pitoresco e tranquilo, ideal para relaxar e desfrutar de uma tarde ensolarada.'
           buttonText='conhecer esses paraísos particulares'
           buttonOnClick={() => {}}
-          buttonSize='xxlarge'
+          {...windowSize !== 'mobile' && {buttonSize: 'xxlarge'}}
         />
       </Section>
       {/* Atrativos */}
@@ -102,7 +102,7 @@ function App() {
           secondParagraph='A Casa dos Licores é uma visita obrigatória, para quem deseja experimentar o sabor autêntico dos licores regionais. Por fim, a Rampa do Voo Livre é um lugar emocionante para os amantes de aventura, com a possibilidade de apreciar uma vista panorâmica única da cidade.'
           buttonText='garantir meu refúgio nas férias'
           buttonOnClick={() => {}}
-          buttonSize='xxlarge'
+          {...windowSize !== 'mobile' && {buttonSize: 'xxlarge'}}
         />
       </Section>
       <Section>

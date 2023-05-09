@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { terciaryHeader,secondaryHeader } from '../../styles/global';
+import { secondaryHeader } from '../../styles/global';
 
 export const Container = styled.div<{device: string}>`
     display:flex;

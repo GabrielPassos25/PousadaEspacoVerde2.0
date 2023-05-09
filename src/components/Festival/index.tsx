@@ -1,8 +1,6 @@
 import React from "react"
 import { Image,Date,Name,Container,Description } from "./style";
 
-import { getWindowSize } from '../../utils/getWindowSize';
-
 interface Props{
     image:any,
     date:String,

@@ -24,7 +24,7 @@ const Description = ({image, imageSide, title, firstParagraph, secondParagraph, 
                         {secondParagraph}
                     </Phrase>
                     <ButtonContainer device={windowSize}>
-                        <Button type="secondary" text={buttonText} onClick={buttonOnClick} size={buttonSize} />
+                        <Button type="secondary" text={buttonText} onClick={buttonOnClick} size={buttonSize} redirect/>
                     </ButtonContainer>
                 </InfoContainer>
             </Information >

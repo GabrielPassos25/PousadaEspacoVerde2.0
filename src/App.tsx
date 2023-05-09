@@ -12,8 +12,6 @@ import { Amenities } from './components/Amenities';
 import Description from './components/Description';
 import { Advertising } from './components/Advertising';
 import { getWindowSize } from './utils/getWindowSize';
-import Festival from './components/Festival';
-import festa from './assets/FestaConceicao.png';
 import FestivalsPage from './components/FestivalsPage';
 
 // Assets
@@ -132,7 +130,7 @@ function App() {
         />
       </Section>
       <Section>
-        <InfosContainer device={windowSize}>
+        <InfosContainer device={windowSize} id="target-element-id">
           <Map/>
           <Forms/>
         </InfosContainer>

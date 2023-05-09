@@ -33,7 +33,7 @@ export function Footer(){
                                     })
                                 }
                         </ModulesContainer>
-                        <Button onClick={()=>{}} size='large' text='reservar agora' type='tertiary'/>
+                        <Button onClick={()=>{}} size='large' text='reservar agora' type='tertiary' redirect/>
                     </FirstLine>
                     <SecondLine>
                         <WhiteLogo/>
@@ -74,7 +74,7 @@ export function Footer(){
                                 }
                         </ModulesContainer>
                         <Separator/>
-                        <Button onClick={()=>{}} size='large' text='reservar agora' type='tertiary'/>
+                        <Button onClick={()=>{}} size='large' text='reservar agora' type='tertiary' redirect/>
                         <Separator/>
                         <Infos device={windowSize}>
                             <Title>

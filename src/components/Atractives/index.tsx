@@ -31,7 +31,7 @@ export function Atractives({image, imageSide, title, firstParagraph, secondParag
                     {secondParagraph}
                 </Description>
                 <Separator/>
-                <Button onClick={buttonOnClick} size={buttonSize} text={buttonText} type='primary' fullWidth={windowSize === 'mobile'} />
+                <Button onClick={buttonOnClick} size={buttonSize} text={buttonText} type='primary' fullWidth={windowSize === 'mobile'} redirect />
             </InfoContainer>
             {
                 imageSide === 'right' &&

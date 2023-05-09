@@ -31,7 +31,7 @@ export function NavBar(){
                             );
                         })
                     }
-                    <Button size='small' text='reservar' onClick={() => {}} type='primary'/>
+                    <Button size='small' text='reservar' onClick={() => {}} type='primary' redirect/>
                 </SectionsContainer>
                 :
                 <Menu/>

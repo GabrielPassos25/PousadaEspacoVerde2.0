@@ -1,4 +1,6 @@
 import React from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 // Styles
 import { GlobalStyle } from "./styles/global";
@@ -12,6 +14,9 @@ import { Advertising } from './components/Advertising';
 import { getWindowSize } from './utils/getWindowSize';
 
 // Assets
+import banner1 from './assets/banner1.png';
+import banner2 from './assets/banner2.png';
+import banner3 from './assets/banner3.png';
 import atractives from './assets/atrativos.png';
 import atractives2 from './assets/atrativos2.png';
 import atractives3 from './assets/atrativos3.png';
@@ -19,8 +24,9 @@ import descricao from './assets/descricao.png';
 import descricao2 from './assets/descricao2.png';
 import { Footer } from './components/Footer';
 import { Forms } from './components/Forms';
-import { InfosContainer } from './styles';
+import { BannerContainer, InfosContainer } from './styles';
 import Map from './components/Map';
+import { CarouselItem } from './components/CarouselItem';
 
 function App() {
   const windowSize = getWindowSize();
@@ -28,7 +34,20 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <TopBar/>
-      <NavBar/>
+      <BannerContainer device={windowSize}>
+        <NavBar/>
+        <Carousel
+          autoPlay
+          infiniteLoop
+          showArrows={false}
+          showStatus={false}
+          showThumbs={false}
+        >
+          <CarouselItem image={banner1} title='As nossas pousada mantêm como critério principal, a tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
+          <CarouselItem image={banner2} title='As nossas pousada mantêm como critério principal, a tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
+          <CarouselItem image={banner3} title='As nossas pousada mantêm como critério principal, a tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
+        </Carousel>
+      </BannerContainer>
       {/* Atrativos */}
       <Section>
         <Atractives

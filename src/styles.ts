@@ -11,3 +11,10 @@ export const InfosContainer = styled.div<{device: string}>`
     `}
     justify-content:center;
 `;
+
+export const BannerContainer = styled.div<{device: string}>`
+    display: flex;
+    min-height: 615px;
+    flex: 1;
+    flex-direction: column;
+`;

@@ -26,7 +26,7 @@ export function Footer(){
                             {
                                 modules.map((module, index) => {
                                     return (
-                                        <SectionButton>
+                                        <SectionButton key={index}>
                                                 {module.title}
                                             </SectionButton>
                                         );
@@ -66,7 +66,7 @@ export function Footer(){
                             {
                                 modules.map((module, index) => {
                                     return (
-                                        <SectionButton>
+                                        <SectionButton key={index}>
                                                 {module.title}
                                             </SectionButton>
                                         );

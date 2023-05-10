@@ -27,4 +27,7 @@ export const SectionButton = styled.button`
     border: none;
     cursor: pointer;
     ${sectionsText}
+    &:hover {
+        transform: scale(1.1);
+    }
 `;

@@ -1,5 +1,6 @@
 // Libs
 import React from 'react';
+import { Link } from 'react-scroll';
 
 // Styles
 import { Container, SectionsContainer, SectionButton } from './styles';
@@ -25,9 +26,11 @@ export function NavBar(){
                     {
                         modules.map((module, index) => {
                             return (
-                                <SectionButton>
-                                    {module.title}
-                                </SectionButton>
+                                <Link to={module.title} smooth={true} duration={800} key={index} style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                    <SectionButton>
+                                        {module.title}
+                                    </SectionButton>
+                                </Link>
                             );
                         })
                     }

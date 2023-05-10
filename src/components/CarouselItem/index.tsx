@@ -15,10 +15,10 @@ export function CarouselItem({ image, title, description }: CarouselItemProps){
     const windowSize = getWindowSize();
     return (
         <Container src={image} device={windowSize}>
-            <Title>
+            <Title device={windowSize}>
                 {title}
             </Title>
-            <Description>
+            <Description device={windowSize}>
                 {description}
             </Description>
         </Container>

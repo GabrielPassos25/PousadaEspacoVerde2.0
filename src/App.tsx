@@ -28,6 +28,7 @@ import { Forms } from './components/Forms';
 import { BannerContainer, InfosContainer } from './styles';
 import Map from './components/Map';
 import { CarouselItem } from './components/CarouselItem';
+import { Photos } from './components/Photos';
 
 function App() {
   const windowSize = getWindowSize();
@@ -44,13 +45,13 @@ function App() {
           showStatus={false}
           showThumbs={false}
         >
-          <CarouselItem image={banner1} title='As nossas pousada mantêm como critério principal, a tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
-          <CarouselItem image={banner2} title='As nossas pousada mantêm como critério principal, a tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
-          <CarouselItem image={banner3} title='As nossas pousada mantêm como critério principal, a tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
+          <CarouselItem image={banner1} title='Venha desfrutar da tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
+          <CarouselItem image={banner2} title='Venha desfrutar da tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
+          <CarouselItem image={banner3} title='Venha desfrutar da tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
         </Carousel>
       </BannerContainer>
       {/* Atrativos */}
-      <Section>
+      <Section title='Atrações'>
         <Atractives
           image={atractives}
           imageSide='left'
@@ -63,7 +64,7 @@ function App() {
         />
       </Section>
       {/* Description */}
-      <Section>
+      <Section title='Acomodações'>
         <Description
           image={descricao}
           imageSide='right'
@@ -76,7 +77,7 @@ function App() {
         />
       </Section>
       {/* Comodidades */}
-      <Section>
+      <Section title='Comodidades'>
         <Amenities/>
       </Section>
       {/* Propagandas */}
@@ -87,7 +88,7 @@ function App() {
         />
       </Section>
       {/* Festivais */}
-      <Section>
+      <Section title='Pontos Turísticos'>
         <FestivalsPage/>
       </Section>
       {/* Description */}
@@ -129,6 +130,11 @@ function App() {
           {...windowSize !== 'mobile' && {buttonSize: 'xxlarge'}}
         />
       </Section>
+      {/* Fotos */}
+      <Section title='Fotos'>
+        <Photos/>
+      </Section>
+      {/* Mapa e formulário */}
       <Section>
         <InfosContainer device={windowSize} id="target-element-id">
           <Map/>

@@ -35,7 +35,7 @@ export function Forms(){
             email: email,
             telefone: whatsapp,
             message: message,
-            to_email: 'gabrielurano30@gmail.com'
+            to_email: 'mateus.carvalho@lanlink.com.br'
         };
     
         emailjs.send('service_xex35el', 'template_fzmjjnu', templateParams, 'KeQ-RwcqpLdJUe73R')

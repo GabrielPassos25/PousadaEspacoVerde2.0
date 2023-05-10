@@ -72,7 +72,7 @@ const FestivalsPage = () =>{
             <List device={windowSize}>
                 {
                     details.map((detail, index) =>(
-                        <Festival image={detail.image} date={detail.date} name={detail.name} description={detail.description}/>
+                        <Festival image={detail.image} date={detail.date} name={detail.name} description={detail.description} key={index}/>
                     ))
                 }
             </List>

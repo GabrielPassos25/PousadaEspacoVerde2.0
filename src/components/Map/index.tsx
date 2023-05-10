@@ -21,14 +21,13 @@ const Map = () =>{
       <Title device={windowSize}> 
         Acesso à pousada
       </Title>
-      <div style={{ height: windowSize === 'desktop'?'390px':'422px' , width: windowSize === 'desktop'?'541px': windowSize === 'tablet'?'361px':'330px', marginTop: '12px'}}>
+      <div style={{ height: windowSize === 'desktop'?'390px':'422px' , width: windowSize === 'desktop'?'541px': windowSize === 'tablet'?'361px':'330px', marginTop: '12px', zIndex: -1}}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyBKObdVgdAYJzPqw8nM5ZFzBBp0TTxaeZU" }}
           defaultCenter={location.center}
           defaultZoom={18}
           draggable={false}
           options={{disableDefaultUI: true}}
-          
           >
           <div>
             <img src={pin} alt="marker" />

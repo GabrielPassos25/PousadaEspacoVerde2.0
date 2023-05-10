@@ -15,7 +15,7 @@ export function ContactRow({data}: ContactProps){
         {
             Object.keys(data).map((key) => {
                 return (
-                    <ContactContainer>
+                    <ContactContainer key={key}>
                         {
                             data[key].logo
                         }

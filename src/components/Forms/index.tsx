@@ -41,7 +41,7 @@ export function Forms(){
         });
         setTimeout(() => {
             setIsSending(false);
-        }, 4000);
+        }, 2000);
       };
 
     return (

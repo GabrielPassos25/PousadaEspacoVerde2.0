@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { secondaryHeader, terciaryHeader } from './styles/global';
 
 export const InfosContainer = styled.div<{device: string}>`
     display: flex;
@@ -17,4 +18,18 @@ export const BannerContainer = styled.div<{device: string}>`
     min-height: 615px;
     flex: 1;
     flex-direction: column;
+`;
+
+export const LoadingContainer = styled.div`
+    flex: 1;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`;
+
+export const Text = styled.p<{device: string}>`
+    ${({device}) => device === 'desktop'  ? secondaryHeader : terciaryHeader};
+    color: var(--green)
 `;

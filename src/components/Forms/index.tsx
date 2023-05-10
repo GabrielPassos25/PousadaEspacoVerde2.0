@@ -25,6 +25,11 @@ export function Forms(){
     const handleSubmit = () => {
         // event.preventDefault();
         setIsSending(true);
+        if(name === '' || email === '' || whatsapp === '' || message === '') {
+            alert('Preencha todos os campos!');
+            setIsSending(false);
+            return;
+        }
         const templateParams = {
             nome: name,
             email: email,

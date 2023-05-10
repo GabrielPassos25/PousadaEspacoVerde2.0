@@ -36,9 +36,38 @@ function App() {
   const [imagesLoaded, setImagesLoaded] = React.useState(false);
 
   React.useEffect(() => {
-    window.onload = () => {
-      setImagesLoaded(true);
-    };
+    const imageElements = document.querySelectorAll('img');
+    const divElements = document.querySelectorAll('div');
+
+    const promises: any[] = [];
+
+    imageElements.forEach(img => {
+      promises.push(
+        new Promise((resolve, reject) => {
+          img.addEventListener('load', resolve);
+          img.addEventListener('error', reject);
+        })
+      );
+    });
+
+    divElements.forEach(div => {
+      const backgroundImage = window.getComputedStyle(div).backgroundImage;
+      if (backgroundImage !== 'none') {
+        const imageUrl = backgroundImage.slice(4, -1).replace(/"/g, "");
+        const img = new Image();
+        promises.push(
+          new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+          })
+        );
+        img.src = imageUrl;
+      }
+    });
+
+    Promise.all(promises)
+      .then(() => setImagesLoaded(true))
+      .catch(() => console.log('Failed to load images.'));
   }, []);
 
   return (

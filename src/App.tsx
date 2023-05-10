@@ -21,7 +21,7 @@ import banner3 from './assets/banner3.png';
 import atractives from './assets/atrativos.png';
 import atractives2 from './assets/atrativos2.png';
 import atractives3 from './assets/atrativos3.png';
-import descricao from './assets/descricao.png';
+import descricao from './assets/photos/quarto1.png';
 import descricao2 from './assets/descricao2.png';
 import loading from './assets/loading.gif';
 import { Footer } from './components/Footer';

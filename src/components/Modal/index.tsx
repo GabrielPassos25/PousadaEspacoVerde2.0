@@ -15,13 +15,13 @@ export function Modal({ image, onClose }: Props){
     return (
       <Container>
         <Content>
-          <img src={image} alt="" style={{width: '100%', height: '100%', marginBottom: 10}}/>
           <Button
             onClick={onClose}
             text='fechar'
             size='small'
             type='primary'
           />
+          <img src={image} alt="" style={{width: '100%', height: '100%', marginTop: 10}}/>
         </Content>
     </Container>
     );

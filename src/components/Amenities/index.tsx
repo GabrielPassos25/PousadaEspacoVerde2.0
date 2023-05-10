@@ -5,7 +5,7 @@ import { Container, Title, List, AmenitieItem, Description } from './styles';
 // Assets
 import AirConditioner from '../../assets/arcondicionado.png';
 import Bathroom  from '../../assets/banheiro.png';
-import Safebox  from '../../assets/cofre.png';
+import Location  from '../../assets/localizacao.svg';
 import Fridge  from '../../assets/geladeira.png';
 import Phone  from '../../assets/telefone.png';
 import Television  from '../../assets/televisao.png';
@@ -23,15 +23,15 @@ const amenities = [
         image: Bathroom
     },
     {
-        name: "Cofre",
-        image: Safebox
+        name: "Localização Privilegiada",
+        image: Location
     },
     {
-        name: "Frigobar",
+        name: "Cozinha",
         image: Fridge
     },
     {
-        name: "Telefone",
+        name: "Atendimento",
         image: Phone
     },
     {

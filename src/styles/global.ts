@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         --green: #225019;
         --light-green: #B1D668;
         --gray: #E8F2ED;
+        --disabled: #C4C4C4;
     }
 
     /* Default Patterns */
@@ -31,8 +32,7 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
         font-family: 'Inter', sans-serif;
     }
-    [disabled] {
-        opacity: 0.6;
+    button[disabled] {
         cursor: not-allowed;
     }
 `;

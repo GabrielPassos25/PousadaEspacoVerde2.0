@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { textButton } from '../../styles/global';
 
-export const Container = styled.div<{type: string, size: string, transparent: boolean, fullWidth?: boolean}>`
+export const Container = styled.button<{type_button: string, size: string, transparent: boolean, fullWidth?: boolean}>`
     ${textButton}
     border: 0;
     padding: 12px 24px;
@@ -14,12 +14,12 @@ export const Container = styled.div<{type: string, size: string, transparent: bo
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    ${({type}) => 
-        type === 'primary' ? `
+    ${({type_button}) => 
+    type_button === 'primary' ? `
             background: var(--green);
             color: var(--gray);
         `
-        : type === 'secondary' ? `
+        : type_button === 'secondary' ? `
             background: var(--light-green);
             color: var(--green);
         `
@@ -65,5 +65,10 @@ export const Container = styled.div<{type: string, size: string, transparent: bo
     text-align: center;
     ${({fullWidth}) => fullWidth && `
         width: 100%;
+    `}
+    ${({disabled}) => disabled && `
+        pointer-events: none;
+        background: var(--disabled);
+        color: var(--gray);
     `}
 `;

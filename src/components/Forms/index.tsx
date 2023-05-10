@@ -2,6 +2,7 @@
 import React from 'react';
 import { Container, Title, Separator } from './styles';
 import { Input } from '../Input';
+import emailjs from 'emailjs-com';
 
 // Assets
 import { ReactComponent as Person } from '../../assets/person.svg';
@@ -18,7 +19,31 @@ export function Forms(){
     const [email, setEmail] = React.useState('');
     const [whatsapp, setWhatsapp] = React.useState('');
     const [message, setMessage] = React.useState('');
+    const [isSending, setIsSending] = React.useState(false);
     const windowSize = getWindowSize();
+
+    const handleSubmit = () => {
+        // event.preventDefault();
+        setIsSending(true);
+        const templateParams = {
+            nome: name,
+            email: email,
+            telefone: whatsapp,
+            message: message,
+            to_email: 'gabrielurano30@gmail.com'
+        };
+    
+        emailjs.send('service_xex35el', 'template_fzmjjnu', templateParams, 'KeQ-RwcqpLdJUe73R')
+        .then((response) => {
+            alert('Mensagem enviada com sucesso!');
+        }, (error) => {
+            alert('Ocorreu um erro ao enviar a mensagem, tente novamente mais tarde.');
+        });
+        setTimeout(() => {
+            setIsSending(false);
+        }, 4000);
+      };
+
     return (
         <Container>
             <Title device={windowSize}>
@@ -54,8 +79,9 @@ export function Forms(){
                 text='enviar'
                 size='small'
                 type='primary'
-                onClick={() => {}}
+                onClick={handleSubmit}
                 fullWidth
+                loading={isSending}
             />
             <Separator/>
             <Contact/>

@@ -37,6 +37,8 @@ function App() {
 
   React.useEffect(() => {
     const imageElements = document.querySelectorAll('img');
+    const divElements = document.querySelectorAll('div');
+
     const promises: any[] = [];
 
     imageElements.forEach(img => {
@@ -46,6 +48,21 @@ function App() {
           img.addEventListener('error', reject);
         })
       );
+    });
+
+    divElements.forEach(div => {
+      const backgroundImage = window.getComputedStyle(div).backgroundImage;
+      if (backgroundImage !== 'none') {
+        const imageUrl = backgroundImage.slice(4, -1).replace(/"/g, "");
+        const img = new Image();
+        promises.push(
+          new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+          })
+        );
+        img.src = imageUrl;
+      }
     });
 
     Promise.all(promises)

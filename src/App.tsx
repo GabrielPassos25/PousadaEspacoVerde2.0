@@ -30,6 +30,7 @@ import { Forms } from './components/Forms';
 import { BannerContainer, InfosContainer } from './styles';
 import Map from './components/Map';
 import { CarouselItem } from './components/CarouselItem';
+import ImagesSection from './components/ImagesSection';
 
 function App() {
   const windowSize = getWindowSize();
@@ -136,6 +137,9 @@ function App() {
           <Map/>
           <Forms/>
         </InfosContainer>
+      </Section>
+      <Section>
+        <ImagesSection/>
       </Section>
       {/* Footer */}
       <Advertising

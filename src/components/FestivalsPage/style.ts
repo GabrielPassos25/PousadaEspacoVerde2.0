@@ -7,7 +7,7 @@ export const Container = styled.div<{device: string}>`
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    padding: ${({device}) => device === 'desktop' ? '64px 164px' : device === 'tablet' ? '64px 40px' : '20px 20px'};
+    padding: ${({device}) => device === 'desktop' ? '64px 164px' : device === 'tablet' ? '64px 40px' : '20px 0px'};
 `;
 
 export const Title = styled.p<{device: string}>`

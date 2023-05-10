@@ -70,7 +70,6 @@ export function Photos(){
             <ImageContainer>
                 {
                     images.map((image, index) => {
-                        console.log(image);
                         return (
                             <Fragment key={index}>
                                 <img src={image} alt='' key={index} height={250} onClick={() => openModal(image)}/>

@@ -44,6 +44,7 @@ function App() {
           showArrows={false}
           showStatus={false}
           showThumbs={false}
+          swipeable={false}
         >
           <CarouselItem image={banner1} title='Venha desfrutar da tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
           <CarouselItem image={banner2} title='Venha desfrutar da tranquilidade, paz e harmonia com a natureza.' description='Ficam localizadas na Rua Silva Jardim, números 644, 648, 656 e 660, próximas à Igreja Matriz e ao Banco do Brasil.'/>
